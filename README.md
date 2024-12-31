@@ -17,6 +17,4 @@ This project is eCommerce website using MERN stack
    - Database seeder (products & users)
      
 ## Website
-  ```bash 
-  https://e-shop-iq54.onrender.com/
-   ```
+   Visit the live version of the application here: [E-Shop](https://e-shop-iq54.onrender.com/)
