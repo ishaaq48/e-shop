@@ -26,5 +26,5 @@ This project is eCommerce website using MERN stack
 ## run 
    *** 
       docker cp atlas-dump ecommerce-mongo:/atlas-dump
-      docker compose up
+      docker compose up --build
    ***
