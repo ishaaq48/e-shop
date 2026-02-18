@@ -15,6 +15,18 @@ This project is eCommerce website using MERN stack
    - Checkout process (shipping, payment method, etc)
    - PayPal / credit card integration
    - Database seeder (products & users)
-     
+
+## .env
+   - NODE_ENV = production
+   = PORT = 5000
+   - MONGO_URL= mongodb://mongo:27017/eShop
+   - JWT_SECRET = <your_secrete>
+   - PAYPAL_CLIENT_ID = <your_playpal_developer_id>
+
+## run 
+   *** 
+      docker cp atlas-dump ecommerce-mongo:/atlas-dump
+      docker compose up
+   ***
 ## Website
    Visit the live version of the application here: [E-Shop](https://e-shop-iq54.onrender.com/)
