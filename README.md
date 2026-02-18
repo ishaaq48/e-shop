@@ -28,5 +28,3 @@ This project is eCommerce website using MERN stack
       docker cp atlas-dump ecommerce-mongo:/atlas-dump
       docker compose up
    ***
-## Website
-   Visit the live version of the application here: [E-Shop](https://e-shop-iq54.onrender.com/)
