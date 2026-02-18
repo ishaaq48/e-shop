@@ -11,6 +11,7 @@ const getProducts = asyncHandler(async (req, res) => {
 
     const count = await Product.countDocuments({...keyword})
 
+  const start = Date.now();
   const products = await Product.find({...keyword})
     .limit(pageSize)
     .skip(pageSize * (page - 1))
@@ -19,8 +20,11 @@ const getProducts = asyncHandler(async (req, res) => {
       page,
       pages: Math.ceil(count / pageSize)
     })
+    const end = Date.now();   
+    console.log(`Query took ${end-start} milliseconds`);
 })
  
+
 const getProductById = asyncHandler(async (req, res) => {
     const product = await Product.findById(req.params.id)
 

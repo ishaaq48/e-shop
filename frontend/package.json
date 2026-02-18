@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
-  },
+  },  
   "dependencies": {
     "@paypal/react-paypal-js": "^8.7.0",
     "@reduxjs/toolkit": "^2.5.0",

@@ -1,0 +1,45 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: ./frontend
+    container_name: ecommerce-frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - frontend-net
+      - backend-net
+    depends_on:
+      - backend
+
+  backend:
+    build: .
+    container_name: ecommerce-backend
+    ports:
+      - "5000:5000" 
+    networks:
+      - backend-net
+    env_file:
+      - ./.env
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:7
+    container_name: ecommerce-mongo
+    ports:
+      - "27017:27017"
+    volumes:  
+      - mongo-data:/data/db
+    networks:
+      - backend-net
+
+networks:
+  frontend-net:
+    driver: bridge
+
+  backend-net:
+    driver: bridge
+
+volumes:
+  mongo-data:
